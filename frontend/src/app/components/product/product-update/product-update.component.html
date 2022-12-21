@@ -1,5 +1,5 @@
 <mat-card>
-    <mat-card-title>Novo Cigarro</mat-card-title>
+    <mat-card-title>Alterar Cigarro</mat-card-title>
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome"
@@ -11,11 +11,11 @@
         </mat-form-field>
     </form>
 
-    <button mat-raised-button (click)="createProduct()">
-        Salvar Cigarro
+    <button mat-raised-button (click)="updateProduct()" color="warn">
+        Editar Cigarro
     </button>
     
-    <button mat-raised-button (click)="cancela()">
-        Tirar Cigarro
+    <button mat-raised-button (click)="cancel()">
+        Cancela
     </button>
 </mat-card>

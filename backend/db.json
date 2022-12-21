@@ -3,22 +3,20 @@
     {
       "id": 1,
       "name": "Caneta BIC Preta",
-      "price": 5.89
+      "price": 5.89,
+      "imageUrl": "https://us-southeast-1.linodeobjects.com/storage/supersantafe/media/uploads/produto/cigarro_eight_king_size_c12445fc-658d-4386-93ed-93496f40d319.png"
     },
     {
       "id": 2,
       "name": "Notebook Mac Pro",
-      "price": 12000.89
+      "price": 12000.89,
+      "imageUrl": "https://us-southeast-1.linodeobjects.com/storage/supersantafe/media/uploads/produto/cigarro_eight_king_size_c12445fc-658d-4386-93ed-93496f40d319.png"
     },
     {
       "id": 3,
       "name": "Sansung S20+",
-      "price": 5000.89
-    },
-    {
-      "name": "Produto de teste",
-      "price": 125.98,
-      "id": 4
+      "price": 5000.89,
+      "imageUrl": "https://us-southeast-1.linodeobjects.com/storage/supersantafe/media/uploads/produto/cigarro_eight_king_size_c12445fc-658d-4386-93ed-93496f40d319.png"
     }
   ]
 }
