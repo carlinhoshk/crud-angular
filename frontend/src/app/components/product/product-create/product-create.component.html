@@ -9,6 +9,13 @@
             <input matInput placeholder="Preço (R$)"
                 [(ngModel)]="product.price" name="price">
         </mat-form-field>
+
+        <form>
+            <label for="image">Selecione uma imagem:</label>
+            <input type="file" id="image" name="image" (change)="uploadFile($event)">
+          </form>
+          
+
     </form>
 
     <button mat-raised-button (click)="createProduct()">

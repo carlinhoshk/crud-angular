@@ -12,9 +12,11 @@ export class ProductCreateComponent implements OnInit{
 
   product: Product = {
     name: '',
-    price: 0
+    price: 0,
+    imageUrl: ''
   }
-
+  fileInput: any;
+ 
   constructor(private productService: ProductService, 
     private router: Router){ }
 
@@ -32,4 +34,19 @@ export class ProductCreateComponent implements OnInit{
   cancela(): void{
     this.router.navigate(['/products'])
   }
+
+  chooseFile() {
+    this.fileInput.nativeElement.click();
+  }
+  
+  uploadFile(event: any) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.product.imageUrl = reader.result;
+    };
+    reader.readAsDataURL(file);
+  }
+  
+  
 }
