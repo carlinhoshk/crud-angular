@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { catchError, EMPTY, map, Observable } from 'rxjs';
@@ -8,9 +8,10 @@ import { Product } from './product.model';
 })
 export class ProductService {
 
-  baseUrl = 'http://localhost:3001/products'
-  //baseUrl = 'http://localhost:8080/produtos'
+  //baseUrl = 'http://localhost:3001/products'
+  baseUrl = 'http://localhost:8080/products'
 
+  
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
   showMessage(msg: string, isError: boolean = false): void {
@@ -30,6 +31,7 @@ export class ProductService {
   }
 
   read(): Observable<Product[]>{
+    //const headers = new HttpHeaders().set('Access-Control-Allow-Origin', 'http://localhost:4201');
     return this.http.get<Product[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.erroHandler(e))
